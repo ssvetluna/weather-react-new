@@ -30,7 +30,7 @@ root.render(
             <br />
             <div>
               <a
-                href="https://github.com/ssvetluna/Final-weather-app.git"
+                href="https://github.com/ssvetluna/weather-react-new"
                 target="_blank"
                 rel="noreferrer"
                 id="source"

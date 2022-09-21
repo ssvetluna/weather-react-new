@@ -3,7 +3,6 @@ import React from "react";
 import "./CurrentInfo.css";
 import MainEmoji from "./MainEmoji";
 import MainTemp from "./MainTemp";
-import Units from "./Units";
 import CurrentDate from "./CurrentDate";
 import CurrentHum from "./CurrentHum";
 import CurrentWind from "./CurrentWind";
@@ -16,7 +15,6 @@ export default function CurrentInfo() {
       </div>
       <div className="col">
         <MainTemp />
-        <Units />
       </div>
       <div className="col">
         <div className="Current">

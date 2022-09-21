@@ -1,7 +1,7 @@
 import React from "react";
-import { useState } from "react";
 import "./MainEmoji.css";
 import axios from "axios";
+import { useState } from "react";
 
 export default function MainEmoji() {
   let [image, setImage] = useState("");

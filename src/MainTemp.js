@@ -10,5 +10,19 @@ export default function MainTemp() {
   }
   let url = `https://api.openweathermap.org/data/2.5/weather?q=Kyiv&units=metric&appid=2f7f11cce544f115af9a2c80b2a612b4`;
   axios.get(url).then(handleResponse);
-  return <div className="MainTemp">{Math.round(temp)}</div>;
+  return (
+    <div className="Units">
+      <span className="MainTemp">{Math.round(temp)}</span>
+      <span>
+        <a href="/" className="Celsius">
+          °C |
+        </a>
+      </span>
+      <span>
+        <a href="/" className="Farengeit">
+          °F
+        </a>
+      </span>
+    </div>
+  );
 }
