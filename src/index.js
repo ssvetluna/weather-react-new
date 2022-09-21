@@ -1,13 +1,51 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./styles.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import City from "./City";
+import Seaching from "./Seaching";
+import CurrentInfo from "./CurrentInfo";
+import Forecast from "./Forecast";
+import ForecastDaily from "./ForecastDaily";
+import reportWebVitals from "./reportWebVitals";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="Container">
+      <div className="row">
+        <div className="col-md-1"></div>
+        <div className="col-md-7">
+          <div className="Card" id="Maincard">
+            <City />
+            <Seaching />
+            <br />
+            <br />
+            <CurrentInfo />
+            <h3>Nearest Forecast</h3>
+            <hr className="hr" />
+            <Forecast />
+            <br />
+            <br />
+            <br />
+            <div>
+              <a
+                href="https://github.com/ssvetluna/Final-weather-app.git"
+                target="_blank"
+                rel="noreferrer"
+                id="source"
+              >
+                Open-source code
+              </a>
+              <span> by Stepanenko Svitlana</span>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3">
+          <ForecastDaily />
+        </div>
+      </div>
+    </div>
   </React.StrictMode>
 );
 

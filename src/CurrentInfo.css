@@ -1,0 +1,10 @@
+.Current {
+  font-size: 1.2rem;
+  text-align: left;
+  position: relative;
+  top: -8px;
+  left: 13px;
+}
+#Updated {
+  color: #ffffff;
+}
