@@ -12,11 +12,5 @@ export default function MainEmoji() {
   axios.get(url).then(handleResponse);
 
   let imageUrl = `http://openweathermap.org/img/wn/${image}@2x.png`;
-  return (
-    <ul className="Units">
-      <li>
-        <img src={imageUrl} alt="icon" />
-      </li>
-    </ul>
-  );
+  return <img src={imageUrl} alt="icon" />;
 }
