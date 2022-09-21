@@ -3,22 +3,29 @@ import React from "react";
 import "./Seaching.css";
 
 export default function Seaching() {
+  function handleClick(event) {
+    event.preventDefault();
+  }
+  function handleChange(event) {
+    event.preventDefault();
+  }
   return (
-    <form className="seaching">
+    <form className="seaching" onClick={handleClick}>
       <div className="input-group">
         <input
-          type="search"
+          type="seaching"
           className="form-control"
           placeholder="Enter a city"
           id="citySeaching"
-          autocomplete="off"
+          onChange={handleChange}
         />
-        <input
+        <button
           type="submit"
           className="btn btn-outline-secondary"
-          value="Search"
           id="btn-seach"
-        />
+        >
+          Seach
+        </button>
 
         <button
           type="button"
