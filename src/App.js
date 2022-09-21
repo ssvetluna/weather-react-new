@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
 import { useState } from "react";
@@ -13,9 +12,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hi bro</p>
-        {city}
+        <p>{city}</p>
 
         <a
           className="App-link"
@@ -23,7 +20,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Links
         </a>
       </header>
     </div>
