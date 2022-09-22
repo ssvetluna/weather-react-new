@@ -10,7 +10,7 @@ export default function Seaching() {
     event.preventDefault();
   }
   return (
-    <form className="seaching" onClick={handleClick}>
+    <form className="seaching">
       <div className="input-group">
         <input
           type="seaching"
@@ -23,6 +23,7 @@ export default function Seaching() {
           type="submit"
           className="btn btn-outline-secondary"
           id="btn-seach"
+          onClick={handleClick}
         >
           Seach
         </button>
