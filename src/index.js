@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
 
-import City from "./City";
 import Seaching from "./Seaching";
 import CurrentInfo from "./CurrentInfo";
 import Forecast from "./Forecast";
@@ -18,7 +17,6 @@ root.render(
         <div className="col-md-1"></div>
         <div className="col-md-7">
           <div className="Card" id="Maincard">
-            <City />
             <Seaching />
             <br />
             <br />
