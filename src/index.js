@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
 
 import Seaching from "./Seaching";
-import CurrentInfo from "./CurrentInfo";
 import Forecast from "./Forecast";
 import ForecastDaily from "./ForecastDaily";
 import reportWebVitals from "./reportWebVitals";
@@ -18,9 +17,6 @@ root.render(
         <div className="col-md-7">
           <div className="Card" id="Maincard">
             <Seaching />
-            <br />
-            <br />
-            <CurrentInfo />
             <h3>Nearest Forecast</h3>
             <hr className="hr" />
             <Forecast />

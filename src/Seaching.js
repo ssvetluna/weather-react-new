@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 import "./Seaching.css";
+import CurrentInfo from "./CurrentInfo";
 
 export default function Seaching() {
   let [city, setCity] = useState("Kyiv");
@@ -15,7 +16,7 @@ export default function Seaching() {
     setCity(event.target.value);
   }
   return (
-    <div>
+    <div className="Seaching">
       <div className="City">{cityUpdate}</div>
       <form className="seaching">
         <div className="input-group">
@@ -24,6 +25,7 @@ export default function Seaching() {
             className="form-control"
             placeholder="Enter a city"
             id="citySeaching"
+            autoComplete="off"
             onChange={handleChange}
           />
           <button
@@ -44,6 +46,9 @@ export default function Seaching() {
           </button>
         </div>
       </form>
+      <br />
+      <br />
+      <CurrentInfo city={cityUpdate} />
     </div>
   );
 }
