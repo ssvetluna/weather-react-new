@@ -4,29 +4,48 @@ import { useState } from "react";
 import "./MainTemp.css";
 
 export default function MainTemp(props) {
-  let [temp, setTemp] = useState(`${Math.round(props.temp)}`);
+  let [count, setCount] = useState(1);
   function handleClickCelsius(event) {
     event.preventDefault();
-    setTemp(Math.round(props.temp));
+    setCount(1);
   }
   function handleClickFarengeit(event) {
     event.preventDefault();
-    setTemp(Math.round((props.temp * 9) / 5 + 32));
+    setCount(2);
   }
-
-  return (
-    <div className="Units">
-      <span className="MainTemp">{temp}</span>
-      <span>
-        <a href="/" className="Celsius" onClick={handleClickCelsius}>
-          °C |
-        </a>
-      </span>
-      <span>
-        <a href="/" className="Farengeit" onClick={handleClickFarengeit}>
-          °F
-        </a>
-      </span>
-    </div>
-  );
+  if (count === 1) {
+    return (
+      <div className="Units">
+        <span className="MainTemp">{Math.round(props.temp)}</span>
+        <span>
+          <a href="/" className="Celsius" onClick={handleClickCelsius}>
+            °C |
+          </a>
+        </span>
+        <span>
+          <a href="/" className="Farengeit" onClick={handleClickFarengeit}>
+            °F
+          </a>
+        </span>
+      </div>
+    );
+  } else {
+    return (
+      <div className="Units">
+        <span className="MainTemp">
+          {Math.round((props.temp * 9) / 5 + 32)}
+        </span>
+        <span>
+          <a href="/" className="Celsius" onClick={handleClickCelsius}>
+            °C |
+          </a>
+        </span>
+        <span>
+          <a href="/" className="Farengeit" onClick={handleClickFarengeit}>
+            °F
+          </a>
+        </span>
+      </div>
+    );
+  }
 }
