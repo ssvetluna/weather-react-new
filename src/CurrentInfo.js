@@ -10,7 +10,7 @@ import CurrentDate from "./CurrentDate";
 export default function CurrentInfo(props) {
   let [humidity, setHumidity] = useState("");
   let [wind, setWind] = useState("");
-  let [temp, setTemp] = useState("");
+  let [temp, setTemp] = useState(0);
   function handleResponse(response) {
     setHumidity(response.data.main.humidity);
     setWind(response.data.wind.speed);
