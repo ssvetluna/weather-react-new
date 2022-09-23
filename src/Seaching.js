@@ -26,6 +26,7 @@ export default function Seaching() {
             placeholder="Enter a city"
             id="citySeaching"
             autoComplete="off"
+            autoFocus="on"
             onChange={handleChange}
           />
           <button

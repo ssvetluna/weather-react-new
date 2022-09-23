@@ -19,9 +19,10 @@ export default function MainTemp(props) {
         <span className="MainTemp">{Math.round(props.temp)}</span>
         <span>
           <a href="/" className="Celsius" onClick={handleClickCelsius}>
-            °C |
+            °C
           </a>
         </span>
+        <span className="slash">|</span>
         <span>
           <a href="/" className="Farengeit" onClick={handleClickFarengeit}>
             °F
