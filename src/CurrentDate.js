@@ -13,9 +13,17 @@ export default function CurrentDate(props) {
   let day = props.date.getDay();
   let hours = props.date.getHours();
   let minutes = props.date.getMinutes();
-  return (
-    <div className="CurrentDate">
-      {days[day]} {hours}:{minutes}
-    </div>
-  );
+  if (minutes < 10) {
+    return (
+      <div className="CurrentDate">
+        {days[day]} {hours}:0{minutes}
+      </div>
+    );
+  } else {
+    return (
+      <div className="CurrentDate">
+        {days[day]} {hours}:{minutes}
+      </div>
+    );
+  }
 }
