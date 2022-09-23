@@ -3,15 +3,16 @@ import React from "react";
 import "./CurrentInfo.css";
 import MainTemp from "./MainTemp";
 import CurrentDate from "./CurrentDate";
+import MainImage from "./MainImage";
 
 export default function CurrentInfo(props) {
   return (
     <div className="row">
       <div className="col-md-4">
-        <img src={props.city.imageUrl} alt="WeatherDescription" width="150" />
+        <MainImage icon={props.city.icon} />
       </div>
       <div className="col">
-        <MainTemp temp={props.city.temperature} />
+        <MainTemp temp={props.city.temperature} alt="Weather description" />
       </div>
       <div className="col">
         <div className="Current">
