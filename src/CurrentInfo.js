@@ -5,12 +5,11 @@ import MainTemp from "./MainTemp";
 import CurrentDate from "./CurrentDate";
 
 export default function CurrentInfo(props) {
-  let imageUrl = `http://openweathermap.org/img/wn/04d@2x.png`;
-  console.log(props.city);
+  let imageUrl = `http://openweathermap.org/img/wn/${props.city.icon}@2x.png`;
   return (
     <div className="row">
-      <div className="col">
-        <img src={imageUrl} alt="icon" />
+      <div className="col-md-4">
+        <img src={imageUrl} alt="WeatherDescription" width="150" />
       </div>
       <div className="col">
         <MainTemp temp={props.city.temperature} />
