@@ -80,10 +80,11 @@ export default function Seaching() {
               </div>
               <h3>Nearest Forecast</h3>
               <hr className="hr" />
-              <Forecast />
+              <br />
+              <Forecast coords={weatherData} />
               <br />
               <br />
-              <br />
+
               <div>
                 <a
                   href="https://github.com/ssvetluna/weather-react-new"

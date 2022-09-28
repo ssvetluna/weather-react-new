@@ -30,7 +30,7 @@ export default function ForecastDays(props) {
                     <span className="ForecastDaysDate">
                       <CurrentDate
                         date={new Date(dailyForecast.dt * 1000)}
-                        style="forecast"
+                        style="forecastDays"
                       />
                     </span>
                     <span className="ForecastDaysImage">

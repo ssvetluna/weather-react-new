@@ -45,10 +45,26 @@ export default function CurrentDate(props) {
       );
     }
   } else {
-    return (
-      <span className="CurrentDate">
-        {days[day]} {months[month]} {date}
-      </span>
-    );
+    if (props.style === "forecastDays") {
+      return (
+        <span className="CurrentDate">
+          {days[day]} {months[month]} {date}
+        </span>
+      );
+    } else {
+      if (minutes < 10) {
+        return (
+          <div className="CurrentDate">
+            {hours}:0{minutes}
+          </div>
+        );
+      } else {
+        return (
+          <div className="CurrentDate">
+            {hours}:{minutes}
+          </div>
+        );
+      }
+    }
   }
 }
