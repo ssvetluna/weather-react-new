@@ -10,20 +10,45 @@ export default function CurrentDate(props) {
     "Friday",
     "Saturday",
   ];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = props.date.getMonth();
   let day = props.date.getDay();
   let hours = props.date.getHours();
   let minutes = props.date.getMinutes();
-  if (minutes < 10) {
-    return (
-      <div className="CurrentDate">
-        {days[day]} {hours}:0{minutes}
-      </div>
-    );
+  let date = props.date.getDate();
+
+  if (props.style === "current") {
+    if (minutes < 10) {
+      return (
+        <div className="CurrentDate">
+          {days[day]} {hours}:0{minutes}
+        </div>
+      );
+    } else {
+      return (
+        <div className="CurrentDate">
+          {days[day]} {hours}:{minutes}
+        </div>
+      );
+    }
   } else {
     return (
-      <div className="CurrentDate">
-        {days[day]} {hours}:{minutes}
-      </div>
+      <span className="CurrentDate">
+        {days[day]} {months[month]} {date}
+      </span>
     );
   }
 }

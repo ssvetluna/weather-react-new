@@ -17,7 +17,7 @@ export default function CurrentInfo(props) {
       <div className="col-md-4">
         <div className="Current">
           <div id="Updated">Last Updated:</div>
-          <CurrentDate date={props.city.date} />
+          <CurrentDate date={props.city.date} style="current" />
           <div className="CurrentHum">Humidity: {props.city.humidity}%</div>
           <div className="CurrentWind">Wind: {props.city.wind} km/h</div>
         </div>

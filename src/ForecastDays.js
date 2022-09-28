@@ -1,27 +1,63 @@
 import React from "react";
 import MainImage from "./MainImage";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import CurrentDate from "./CurrentDate";
+
 import "./ForecastDays.css";
 
 export default function ForecastDays(props) {
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.coords.lat}&lon=${props.coords.lon}&exclude=hourly&appid=2f7f11cce544f115af9a2c80b2a612b4&units=metric`;
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
-    console.log(response);
+    setLoaded(true);
+    setForecast(response.data.daily);
   }
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coords]);
 
-  axios.get(apiUrl).then(handleResponse);
-
-  return (
-    <div className="ForecastDays">
-      <div className="Card" id="Forecastbase">
-        <span className="ForecastDaysDate">Wednesday Sep 28</span>
-        <span className="ForecastDaysImage">
-          <MainImage icon="03n" size={40} />
-        </span>
-        <span className="ForecastDaysTempMax">17° </span>
-        <span className="ForecastDaysTempMin">10°</span>
+  if (loaded) {
+    return (
+      <div className="ForecastDays">
+        <div className="row">
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col-12" key={index}>
+                  <div className="Card" id="Forecastbase">
+                    <span className="ForecastDaysDate">
+                      <CurrentDate
+                        date={new Date(dailyForecast.dt * 1000)}
+                        style="forecast"
+                      />
+                    </span>
+                    <span className="ForecastDaysImage">
+                      <MainImage
+                        icon={dailyForecast.weather[0].icon}
+                        size={40}
+                      />
+                    </span>
+                    <span className="ForecastDaysTempMax">
+                      {Math.round(dailyForecast.temp.max)}°{" "}
+                    </span>
+                    <span className="ForecastDaysTempMin">
+                      {Math.round(dailyForecast.temp.min)}°
+                    </span>
+                  </div>
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.coords.lat}&lon=${props.coords.lon}&appid=6643c7326a4c2a38838264a28531d97e&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+    return null;
+  }
 }

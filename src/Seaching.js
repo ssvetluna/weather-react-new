@@ -12,7 +12,6 @@ export default function Seaching() {
   let [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -27,7 +26,7 @@ export default function Seaching() {
   }
 
   function seach(props) {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props}&units=metric&appid=2f7f11cce544f115af9a2c80b2a612b4`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props}&units=metric&appid=6643c7326a4c2a38838264a28531d97e`;
     axios.get(url).then(handleResponse);
   }
   function handleClick(event) {
