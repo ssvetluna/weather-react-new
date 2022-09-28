@@ -10,6 +10,7 @@ export default function Seaching() {
   let [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
+    console.log(response);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,

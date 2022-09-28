@@ -9,12 +9,12 @@ export default function CurrentInfo(props) {
   return (
     <div className="row">
       <div className="col-md-4">
-        <MainImage icon={props.city.icon} />
+        <MainImage icon={props.city.icon} size={110} />
       </div>
-      <div className="col">
+      <div className="col-md-4">
         <MainTemp temp={props.city.temperature} alt="Weather description" />
       </div>
-      <div className="col">
+      <div className="col-md-4">
         <div className="Current">
           <div id="Updated">Last Updated:</div>
           <CurrentDate date={props.city.date} />

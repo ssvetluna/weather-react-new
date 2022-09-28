@@ -6,7 +6,7 @@ import "./styles.css";
 
 import Seaching from "./Seaching";
 import Forecast from "./Forecast";
-import ForecastDaily from "./ForecastDaily";
+import ForecastDays from "./ForecastDays";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,7 +15,7 @@ root.render(
     <div className="Container">
       <div className="row">
         <div className="col-md-1"></div>
-        <div className="col-md-7">
+        <div className="col-md-6">
           <div className="Card" id="Maincard">
             <Seaching />
             <h3>Nearest Forecast</h3>
@@ -37,8 +37,11 @@ root.render(
             </div>
           </div>
         </div>
-        <div className="col-md-3">
-          <ForecastDaily />
+        <div className="col-md-4">
+          <div className="Card" id="Forecastcard">
+            <h2>Daily Forecast</h2>
+          </div>
+          <ForecastDays />
         </div>
       </div>
     </div>

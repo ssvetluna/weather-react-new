@@ -12,17 +12,11 @@
   background-color: rgb(222, 212, 115, 0.8);
   display: inherit;
 }
-#Forecast-image {
-  width: 32px;
-}
-#Forecast-time-image {
-  width: 46px;
-}
-.Forecast-temp-max,
-.Weater-forecast-time-temp {
+
+.ForecastDaysTempMax {
   font-weight: bold;
 }
-.Forecast-temp-min {
+.ForecastDaysTempMin {
   opacity: 0.7;
 }
 .Card {
@@ -31,4 +25,8 @@
   box-shadow: 0 30px 50px rgb(116 141 166 / 56%);
   background-color: rgb(222, 212, 115, 0.8);
   padding: 20px 15px;
+}
+canvas {
+  padding: 0 20px;
+  vertical-align: middle;
 }
