@@ -11,10 +11,14 @@ export default function CurrentInfo(props) {
       <div className="col-md-4">
         <MainImage icon={props.city.icon} size={110} />
       </div>
-      <div className="col-md-4">
-        <MainTemp temp={props.city.temperature} alt="Weather description" />
+      <div className="col-6 col-md-4">
+        <MainTemp
+          temp={props.city.temperature}
+          alt="Weather description"
+          animate={true}
+        />
       </div>
-      <div className="col-md-4">
+      <div className="col-6 col-md-4">
         <div className="Current">
           <div id="Updated">Last Updated:</div>
           <CurrentDate date={props.city.date} style="current" />

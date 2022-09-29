@@ -8,11 +8,6 @@
   background-color: rgb(108, 117, 125, 0.8);
   margin-top: 40px;
 }
-#Forecastbase {
-  background-color: rgb(222, 212, 115, 0.8);
-  display: inherit;
-  margin-top: 4px;
-}
 
 .ForecastDaysTempMax {
   font-weight: bold;
@@ -20,14 +15,34 @@
 .ForecastDaysTempMin {
   opacity: 0.7;
 }
-.Card {
+.RAIN {
   margin: 16px;
   padding: 20px;
   box-shadow: 0 30px 50px rgb(116 141 166 / 56%);
-  background-color: rgb(222, 212, 115, 0.8);
+  background-color: rgb(139, 157, 176);
   padding: 20px 15px;
+  display: inherit;
+  margin-top: 4px;
 }
 canvas {
   padding: 0 20px;
   vertical-align: middle;
+}
+.CLEAR_DAY {
+  margin: 16px;
+  padding: 20px;
+  box-shadow: 0 30px 50px rgb(116 141 166 / 56%);
+  background-color: rgb(219, 213, 135);
+  padding: 20px 15px;
+  display: inherit;
+  margin-top: 4px;
+}
+.CLOUDY {
+  margin: 16px;
+  padding: 20px;
+  box-shadow: 0 30px 50px rgb(116 141 166 / 56%);
+  background-color: rgb(222, 222, 222);
+  padding: 20px 15px;
+  display: inherit;
+  margin-top: 4px;
 }

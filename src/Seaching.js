@@ -11,6 +11,27 @@ export default function Seaching() {
   let [city, setCity] = useState("Kyiv");
   let [weatherData, setWeatherData] = useState({ ready: false });
 
+  const codeMapping = {
+    "01d": "CLEAR_DAY",
+    "01n": "CLEAR_DAY",
+    "02d": "CLEAR_DAY",
+    "02n": "CLEAR_DAY",
+    "03d": "CLEAR_DAY",
+    "03n": "CLEAR_DAY",
+    "04d": "CLOUDY",
+    "04n": "CLOUDY",
+    "09d": "RAIN",
+    "09n": "RAIN",
+    "10d": "RAIN",
+    "10n": "RAIN",
+    "11d": "RAIN",
+    "11n": "RAIN",
+    "13d": "RAIN",
+    "13n": "RAIN",
+    "50d": "RAIN",
+    "50n": "RAIN",
+  };
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -42,7 +63,7 @@ export default function Seaching() {
         <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-6">
-            <div className="Card" id="Maincard">
+            <div className={codeMapping[weatherData.icon]} id="Maincard">
               <div className="Seaching">
                 <div className="City">{weatherData.city}</div>
                 <form className="seaching">
@@ -53,7 +74,7 @@ export default function Seaching() {
                       placeholder="Enter a city"
                       id="citySeaching"
                       autoComplete="off"
-                      autoFocus="on"
+                      autoFocus="off"
                       onChange={handleChange}
                     />
                     <button
@@ -63,14 +84,6 @@ export default function Seaching() {
                       onClick={handleClick}
                     >
                       Seach
-                    </button>
-
-                    <button
-                      type="button"
-                      className="btn btn-outline-secondary"
-                      id="current"
-                    >
-                      Current
                     </button>
                   </div>
                 </form>

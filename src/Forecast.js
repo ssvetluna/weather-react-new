@@ -35,6 +35,7 @@ export default function Forecast(props) {
                     <MainImage
                       icon={hourlyForecast.weather[0].icon}
                       size={40}
+                      animate={false}
                     />
                   </div>
                   <div className="ForecastTemp">

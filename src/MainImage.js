@@ -28,7 +28,7 @@ export default function MainImage(props) {
       icon={codeMapping[props.icon]}
       color="black"
       size={props.size}
-      animate={true}
+      animate={props.animate}
     />
   );
 }
