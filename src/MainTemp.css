@@ -8,32 +8,7 @@
   text-align: left;
   top: -39px;
 }
-.Units .Farengeit {
-  font-size: 1.3rem;
-  position: relative;
-  text-align: left;
-  top: -39px;
-}
-.Units .slash {
-  font-size: 1.3rem;
-  position: relative;
-  text-align: left;
-  top: -39px;
-}
 .Celsius {
   text-decoration: none;
-  color: #282f36;
-}
-.Farengeit {
-  text-decoration: none;
-  color: #282f36;
-}
-.Celsius:hover {
-  color: #ffffff;
-}
-.Farengeit:hover {
-  color: #ffffff;
-}
-.slash:hover {
   color: #282f36;
 }
