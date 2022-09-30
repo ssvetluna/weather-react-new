@@ -30,7 +30,7 @@ export default function CurrentDate(props) {
   let minutes = props.date.getMinutes();
   let date = props.date.getDate();
 
-  if (props.style === "current") {
+  if (props.description === "current") {
     if (minutes < 10) {
       return (
         <div className="CurrentDate">
@@ -45,7 +45,7 @@ export default function CurrentDate(props) {
       );
     }
   } else {
-    if (props.style === "forecastDays") {
+    if (props.description === "forecastDays") {
       return (
         <span className="CurrentDate">
           {days[day]} {months[month]} {date}

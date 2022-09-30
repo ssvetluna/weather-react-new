@@ -11,7 +11,6 @@ export default function Forecast(props) {
   function handleResponse(response) {
     setLoaded(true);
     setForecast(response.data.hourly);
-    console.log(response);
   }
   useEffect(() => {
     setLoaded(false);
@@ -28,7 +27,7 @@ export default function Forecast(props) {
                   <div className="ForecastDate">
                     <CurrentDate
                       date={new Date(hourlyForecast.dt * 1000)}
-                      style="forecast"
+                      description="forecast"
                     />
                   </div>
                   <div className="ForecastImage">
