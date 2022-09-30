@@ -12,11 +12,7 @@ export default function CurrentInfo(props) {
         <MainImage icon={props.city.icon} size={110} />
       </div>
       <div className="col-6 col-md-4">
-        <MainTemp
-          temp={props.city.temperature}
-          alt="Weather description"
-          animate="true"
-        />
+        <MainTemp temp={props.city.temperature} alt="Weather description" />
       </div>
       <div className="col-6 col-md-4">
         <div className="Current">

@@ -61,7 +61,6 @@ export default function ForecastDays(props) {
                       <MainImage
                         icon={dailyForecast.weather[0].icon}
                         size={40}
-                        animate="true"
                       />
                     </span>
                     <span className="ForecastDaysTempMax">
