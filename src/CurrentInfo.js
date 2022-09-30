@@ -15,7 +15,7 @@ export default function CurrentInfo(props) {
         <MainTemp
           temp={props.city.temperature}
           alt="Weather description"
-          animate={true}
+          animate="true"
         />
       </div>
       <div className="col-6 col-md-4">
