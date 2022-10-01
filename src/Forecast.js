@@ -30,7 +30,7 @@ export default function Forecast(props) {
                       description="forecast"
                     />
                   </div>
-                  <div className="ForecastImage">
+                  <div className="ForecastImage text-center">
                     <MainImage
                       icon={hourlyForecast.weather[0].icon}
                       size={40}

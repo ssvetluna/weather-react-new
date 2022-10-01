@@ -51,7 +51,7 @@ export default function ForecastDays(props) {
                     className={codeMapping[dailyForecast.weather[0].icon]}
                     id="Forecastbase"
                   >
-                    <span className="ForecastDaysDate">
+                    <span className="ForecastDaysDate me-3">
                       <CurrentDate
                         date={new Date(dailyForecast.dt * 1000)}
                         description="forecastDays"
@@ -63,7 +63,7 @@ export default function ForecastDays(props) {
                         size={40}
                       />
                     </span>
-                    <span className="ForecastDaysTempMax">
+                    <span className="ForecastDaysTempMax ms-3">
                       {Math.round(dailyForecast.temp.max)}°{" "}
                     </span>
                     <span className="ForecastDaysTempMin">
